@@ -13,32 +13,46 @@
     nav a { margin: 0 0.8rem; color: #fff; text-decoration: none; font-weight: 500; }
     nav a:hover { color: #d4af37; }
 
-    section { padding: 6rem 1rem; background: url('https://images.unsplash.com/photo-1600181955216-39b74a8c3eb0?auto=format&fit=crop&w=1950&q=80') center/cover no-repeat; color: white; }
+    section { padding: 6rem 1rem; color: white; }
 
-    .hero {
-      height: 100vh;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      text-align: center;
+    .hero, .about, .news, .investments, .contact {
+      background: url('https://images.unsplash.com/photo-1600181955216-39b74a8c3eb0?auto=format&fit=crop&w=1950&q=80') center/cover no-repeat;
+      position: relative;
+    }
+
+    /* Overlay to improve readability */
+    .overlay {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0,0,0,0.6);
+      z-index: 1;
+    }
+
+    .section-content {
+      position: relative;
+      z-index: 2;
+      max-width: 1100px;
+      margin: auto;
       padding: 2rem;
     }
-    .hero h2 { font-size: 3rem; margin-bottom: 1rem; color: #fff; text-shadow: 0 2px 6px rgba(0,0,0,0.7); }
+
+    .hero { height: 100vh; display: flex; align-items: center; justify-content: center; text-align: center; }
+    .hero h2 { font-size: 3rem; margin-bottom: 1rem; text-shadow: 0 2px 6px rgba(0,0,0,0.7); }
     .hero p { font-size: 1.2rem; max-width: 700px; margin: auto; text-shadow: 0 2px 6px rgba(0,0,0,0.6); }
     .btn { background: #d4af37; color: #111; padding: 0.8rem 1.6rem; border: none; border-radius: 2rem; cursor: pointer; text-decoration: none; font-weight: 600; }
     .btn:hover { background: #b38e2f; color: white; }
 
-    .container { max-width: 1100px; margin: auto; }
     .grid { display: grid; gap: 2rem; }
     .grid-2 { grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); }
-    .card { background: rgba(255,255,255,0.9); border-radius: 1rem; padding: 2rem; box-shadow: 0 4px 12px rgba(0,0,0,0.1); text-align: center; color: #111; }
+    .card { background: rgba(255,255,255,0.9); border-radius: 1rem; padding: 2rem; box-shadow: 0 4px 12px rgba(0,0,0,0.2); text-align: center; color: #111; }
     .card img { width: 60px; margin-bottom: 1rem; }
     h2.section-title { color: #d4af37; font-size: 2rem; margin-bottom: 2rem; text-align: center; text-shadow: 1px 1px 2px rgba(0,0,0,0.7); }
 
-    .about p { max-width: 800px; margin: auto; line-height: 1.7; background: rgba(0,0,0,0.6); padding: 1rem; border-radius: 0.5rem; }
-
-    .news .card { text-align: left; }
-    .news h3 { margin-top: 0; }
+    .about p { max-width: 800px; margin: auto; line-height: 1.7; background: rgba(0,0,0,0.5); padding: 1rem; border-radius: 0.5rem; }
+    .news .card, .investments .card { background: rgba(255,255,255,0.9); }
 
     .contact form { max-width: 500px; margin: auto; }
     input, textarea { width: 100%; padding: 0.8rem; border: none; border-radius: 0.5rem; margin-bottom: 1rem; }
@@ -65,22 +79,25 @@
   </header>
 
   <section id="home" class="hero">
-    <div>
+    <div class="overlay"></div>
+    <div class="section-content">
       <h2>Secure Your Future with Gold & Silver</h2>
       <p>At Exodus Investment Ltd., we specialise in high-value metals that preserve wealth and stand the test of time.</p>
-      <a href="#about" class="btn" style="margin-top:1.5rem; display:inline-block;">Learn More</a>
+      <a href="#about" class="btn">Learn More</a>
     </div>
   </section>
 
   <section id="about" class="about">
-    <div class="container">
+    <div class="overlay"></div>
+    <div class="section-content">
       <h2 class="section-title">About Us</h2>
       <p>Founded in 2025 by <strong>Sean Wood</strong> in Edinburgh, Scotland, Exodus Investment Ltd. is dedicated to safeguarding and growing wealth through strategic investments in rare commodities. With a core focus on physical gold and silver, we aim to deliver stability and long-term value to our partners.</p>
     </div>
   </section>
 
-  <section id="investments">
-    <div class="container">
+  <section id="investments" class="investments">
+    <div class="overlay"></div>
+    <div class="section-content">
       <h2 class="section-title">Our Investments</h2>
       <div class="grid grid-2">
         <div class="card">
@@ -98,7 +115,8 @@
   </section>
 
   <section id="news" class="news">
-    <div class="container">
+    <div class="overlay"></div>
+    <div class="section-content">
       <h2 class="section-title">News & Updates</h2>
       <div class="card">
         <h3>Exodus Investment Ltd. launches in Edinburgh</h3>
@@ -109,7 +127,8 @@
   </section>
 
   <section id="contact" class="contact">
-    <div class="container">
+    <div class="overlay"></div>
+    <div class="section-content">
       <h2 class="section-title">Contact Us</h2>
       <p style="text-align:center; margin-bottom:1.5rem;">We’d love to hear from you. Reach out for partnership or investment inquiries.</p>
       <form>
