@@ -10,6 +10,15 @@
     header { background: rgba(0,0,0,0.7); position: fixed; top: 0; width: 100%; z-index: 100; }
     header .container { max-width: 1200px; margin: auto; display: flex; justify-content: space-between; align-items: center; padding: 1rem 2rem; }
     header h1 { color: #d4af37; font-size: 1.5rem; font-weight: 700; }
+    logo-header {
+    text-align: center; /* center the logo */
+    margin: 20px 0;     /* adjust spacing above/below */
+}
+
+.logo-header img {
+    height: 80px;       /* adjust logo height to fit header */
+    max-width: 100%;    /* responsive on mobile */
+}
     nav a { margin: 0 0.8rem; color: #fff; text-decoration: none; font-weight: 500; }
     nav a:hover { color: #d4af37; }
 
@@ -67,7 +76,7 @@
 <body>
   <header>
     <div class="container">
-      <h1>
+      <h1 class="logo-header">
   <img src="/gold/exodus-investment-logo-small.png" alt="Exodus Investment Logo" style="height: 80px;">
 </h1>
       <nav>
