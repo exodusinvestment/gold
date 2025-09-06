@@ -4,24 +4,53 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Exodus Investment Ltd.</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
   <style>
-    body { margin: 0; font-family: Arial, sans-serif; background: #f9fafb; color: #111; }
-    header { background: #fff; box-shadow: 0 2px 4px rgba(0,0,0,0.1); position: sticky; top: 0; z-index: 100; }
-    header .container { max-width: 1100px; margin: auto; display: flex; justify-content: space-between; align-items: center; padding: 1rem; }
-    header h1 { color: #b7791f; font-size: 1.5rem; }
-    nav a { margin: 0 0.8rem; color: #444; text-decoration: none; font-weight: 500; }
-    nav a:hover { color: #b7791f; }
-    section { padding: 4rem 1rem; }
-    .center { text-align: center; }
-    .btn { background: #b7791f; color: white; padding: 0.75rem 1.5rem; border: none; border-radius: 1rem; cursor: pointer; text-decoration: none; }
-    .btn:hover { background: #975a16; }
+    body { margin: 0; font-family: 'Poppins', sans-serif; background: #f9fafb; color: #111; }
+    header { background: rgba(0,0,0,0.7); position: fixed; top: 0; width: 100%; z-index: 100; }
+    header .container { max-width: 1200px; margin: auto; display: flex; justify-content: space-between; align-items: center; padding: 1rem 2rem; }
+    header h1 { color: #d4af37; font-size: 1.5rem; font-weight: 700; }
+    nav a { margin: 0 0.8rem; color: #fff; text-decoration: none; font-weight: 500; }
+    nav a:hover { color: #d4af37; }
+
+    section { padding: 6rem 1rem; }
+    .hero {
+      background: url('https://images.unsplash.com/photo-1617042375876-d36e35f1df65?ixlib=rb-4.0.3&auto=format&fit=crop&w=1950&q=80') center/cover no-repeat;
+      color: white;
+      height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      padding: 2rem;
+    }
+    .hero h2 { font-size: 3rem; margin-bottom: 1rem; color: #fff; text-shadow: 0 2px 6px rgba(0,0,0,0.7); }
+    .hero p { font-size: 1.2rem; max-width: 700px; margin: auto; text-shadow: 0 2px 6px rgba(0,0,0,0.6); }
+    .btn { background: #d4af37; color: #111; padding: 0.8rem 1.6rem; border: none; border-radius: 2rem; cursor: pointer; text-decoration: none; font-weight: 600; }
+    .btn:hover { background: #b38e2f; color: white; }
+
     .container { max-width: 1100px; margin: auto; }
-    .grid { display: grid; gap: 1.5rem; }
-    .grid-2 { grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); }
-    .card { background: #fff; border-radius: 1rem; padding: 1.5rem; box-shadow: 0 2px 6px rgba(0,0,0,0.1); }
-    footer { background: #111; color: #ccc; text-align: center; padding: 1.5rem; }
-    input, textarea { width: 100%; padding: 0.75rem; border: 1px solid #ccc; border-radius: 0.75rem; }
+    .grid { display: grid; gap: 2rem; }
+    .grid-2 { grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); }
+    .card { background: #fff; border-radius: 1rem; padding: 2rem; box-shadow: 0 4px 12px rgba(0,0,0,0.1); text-align: center; }
+    .card img { width: 60px; margin-bottom: 1rem; }
+    h2.section-title { color: #d4af37; font-size: 2rem; margin-bottom: 2rem; text-align: center; }
+
+    .about { background: url('https://images.unsplash.com/photo-1509099836639-18ba1795216d?ixlib=rb-4.0.3&auto=format&fit=crop&w=1950&q=80') center/cover no-repeat; color: white; text-align: center; }
+    .about p { max-width: 800px; margin: auto; line-height: 1.7; background: rgba(0,0,0,0.6); padding: 1rem; border-radius: 0.5rem; }
+
+    .news .card { text-align: left; }
+    .news h3 { margin-top: 0; }
+
+    .contact { background: #111; color: white; }
+    .contact form { max-width: 500px; margin: auto; }
+    input, textarea { width: 100%; padding: 0.8rem; border: none; border-radius: 0.5rem; margin-bottom: 1rem; }
     textarea { resize: vertical; }
+    .contact button { background: #d4af37; color: #111; border: none; border-radius: 2rem; padding: 0.8rem 1.6rem; font-weight: 600; cursor: pointer; }
+    .contact button:hover { background: #b38e2f; color: white; }
+
+    footer { background: #000; color: #ccc; text-align: center; padding: 1.5rem; }
+    footer p { margin: 0; }
   </style>
 </head>
 <body>
@@ -38,51 +67,59 @@
     </div>
   </header>
 
-  <section id="home" class="center" style="background:#fefce8;">
-    <h2 style="color:#b7791f; font-size:2rem; margin-bottom:1rem;">Secure Your Future with Gold & Silver</h2>
-    <p style="max-width:600px; margin:auto; color:#444; font-size:1.1rem;">At Exodus Investment Ltd., we specialise in high-value metals that preserve wealth and stand the test of time.</p>
-    <a href="#about" class="btn" style="margin-top:1.5rem; display:inline-block;">Learn More</a>
+  <section id="home" class="hero">
+    <div>
+      <h2>Secure Your Future with Gold & Silver</h2>
+      <p>At Exodus Investment Ltd., we specialise in high-value metals that preserve wealth and stand the test of time.</p>
+      <a href="#about" class="btn" style="margin-top:1.5rem; display:inline-block;">Learn More</a>
+    </div>
   </section>
 
-  <section id="about" class="container">
-    <h2 style="color:#b7791f; font-size:1.8rem; margin-bottom:1rem;">About Us</h2>
-    <p style="color:#444; line-height:1.6;">Founded in 2025 by <strong>Sean Wood</strong> in Edinburgh, Scotland, Exodus Investment Ltd. is dedicated to safeguarding and growing wealth through strategic investments in rare commodities. With a core focus on physical gold and silver, we aim to deliver stability and long-term value to our partners.</p>
-  </section>
-
-  <section id="investments" style="background:#f3f4f6;">
+  <section id="about" class="about">
     <div class="container">
-      <h2 style="color:#b7791f; font-size:1.8rem; margin-bottom:1rem;">Our Investments</h2>
+      <h2 class="section-title">About Us</h2>
+      <p>Founded in 2025 by <strong>Sean Wood</strong> in Edinburgh, Scotland, Exodus Investment Ltd. is dedicated to safeguarding and growing wealth through strategic investments in rare commodities. With a core focus on physical gold and silver, we aim to deliver stability and long-term value to our partners.</p>
+    </div>
+  </section>
+
+  <section id="investments">
+    <div class="container">
+      <h2 class="section-title">Our Investments</h2>
       <div class="grid grid-2">
         <div class="card">
-          <h3 style="font-size:1.2rem; margin-bottom:0.5rem;">Gold</h3>
-          <p style="color:#555;">We invest in physical gold and shares underpinned by the price of gold, ensuring wealth preservation in uncertain times.</p>
+          <img src="https://img.icons8.com/ios-filled/100/d4af37/gold-bars.png" alt="Gold Icon">
+          <h3>Gold</h3>
+          <p>We invest in physical gold and shares underpinned by the price of gold, ensuring wealth preservation in uncertain times.</p>
         </div>
         <div class="card">
-          <h3 style="font-size:1.2rem; margin-bottom:0.5rem;">Silver</h3>
-          <p style="color:#555;">Silver remains a cornerstone of our portfolio, balancing long-term security with industrial demand growth.</p>
+          <img src="https://img.icons8.com/ios-filled/100/d4af37/silver-bars.png" alt="Silver Icon">
+          <h3>Silver</h3>
+          <p>Silver remains a cornerstone of our portfolio, balancing long-term security with industrial demand growth.</p>
         </div>
       </div>
     </div>
   </section>
 
-  <section id="news" class="container">
-    <h2 style="color:#b7791f; font-size:1.8rem; margin-bottom:1rem;">News & Updates</h2>
-    <div class="card">
-      <h3 style="font-size:1.2rem; margin-bottom:0.5rem;">Exodus Investment Ltd. launches in Edinburgh</h3>
-      <p style="font-size:0.9rem; color:#666; margin-bottom:0.5rem;">March 2025</p>
-      <p style="color:#444;">We are proud to announce the official launch of Exodus Investment Ltd., with a mission to lead in precious metals investment strategies.</p>
+  <section id="news" class="news">
+    <div class="container">
+      <h2 class="section-title">News & Updates</h2>
+      <div class="card">
+        <h3>Exodus Investment Ltd. launches in Edinburgh</h3>
+        <p style="font-size:0.9rem; color:#666;">March 2025</p>
+        <p>We are proud to announce the official launch of Exodus Investment Ltd., with a mission to lead in precious metals investment strategies.</p>
+      </div>
     </div>
   </section>
 
-  <section id="contact" style="background:#fefce8;">
+  <section id="contact" class="contact">
     <div class="container">
-      <h2 style="color:#b7791f; font-size:1.8rem; margin-bottom:1rem;">Contact Us</h2>
-      <p style="color:#444; margin-bottom:1.5rem;">We’d love to hear from you. Reach out for partnership or investment inquiries.</p>
-      <form class="grid" style="max-width:500px; gap:1rem;">
+      <h2 class="section-title">Contact Us</h2>
+      <p style="text-align:center; margin-bottom:1.5rem;">We’d love to hear from you. Reach out for partnership or investment inquiries.</p>
+      <form>
         <input type="text" placeholder="Your Name">
         <input type="email" placeholder="Your Email">
         <textarea placeholder="Your Message" rows="5"></textarea>
-        <button type="submit" class="btn">Send Message</button>
+        <button type="submit">Send Message</button>
       </form>
     </div>
   </section>
