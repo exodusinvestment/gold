@@ -10,19 +10,16 @@
     header { background: rgba(0,0,0,0.7); position: fixed; top: 0; width: 100%; z-index: 100; }
     header .container { max-width: 1200px; margin: auto; display: flex; justify-content: space-between; align-items: center; padding: 1rem 2rem; }
     header h1 { color: #d4af37; font-size: 1.5rem; font-weight: 700; }
-    logo-header {
-    text-align: center; /* center the logo */
-    margin: 20px 0;     /* adjust spacing above/below */
-}
 
-.logo-header img {
-    height: 100%;       /* adjust logo height to fit header */
-    max-width: 100%;    /* responsive on mobile */
-}
+    .logo-header img {
+      height: 80px;
+      max-width: 100%;
+    }
+
     nav a { margin: 0 0.8rem; color: #fff; text-decoration: none; font-weight: 500; }
     nav a:hover { color: #d4af37; }
 
-    section { padding: 6rem 1rem; color: white; position: relative; }
+    section { padding: 6rem 1rem; color: white; position: relative; min-height: 80vh; }
 
     /* Unified bullion stacks background */
     .hero, .about, .investments, .news, .contact {
@@ -71,14 +68,34 @@
 
     footer { background: #000; color: #ccc; text-align: center; padding: 1.5rem; }
     footer p { margin: 0; }
+
+    /* Responsive video embed */
+    .video-container {
+      position: relative;
+      padding-bottom: 56.25%; /* 16:9 aspect ratio */
+      height: 0;
+      overflow: hidden;
+      max-width: 100%;
+      margin: 1rem auto;
+      border-radius: 0.75rem;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.4);
+    }
+    .video-container iframe {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      border: 0;
+    }
   </style>
 </head>
 <body>
   <header>
     <div class="container">
       <h1 class="logo-header">
-  <img src="/gold/exodus-investment-logo-transparent.png" alt="Exodus Investment Logo" style="height: 80px;">
-</h1>
+        <img src="/gold/exodus-investment-logo-transparent.png" alt="Exodus Investment Logo">
+      </h1>
       <nav>
         <a href="#home">Home</a>
         <a href="#about">About Us</a>
@@ -94,9 +111,13 @@
     <div class="section-content">
       <h2>Secure Your Future with Gold & Silver</h2>
       <p>At Exodus Investment Ltd., we specialise in high-value metals that preserve wealth and stand the test of time.</p>
-      <p> </p>
       <a href="#about" class="btn">Learn More</a>
-      <p><iframe width="560" height="315" src="https://app.heygen.com/embeds/774273f344f24d0290c3b6f390efb539" title="HeyGen video player" frameborder="0" allow="encrypted-media; fullscreen;" allowfullscreen></iframe></p>
+      <div class="video-container">
+        <iframe src="https://app.heygen.com/player/774273f344f24d0290c3b6f390efb539"
+                frameborder="0"
+                allow="autoplay; fullscreen; picture-in-picture"
+                allowfullscreen></iframe>
+      </div>
     </div>
   </section>
 
